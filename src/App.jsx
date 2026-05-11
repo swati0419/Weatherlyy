@@ -55,7 +55,7 @@ function App() {
 
   useEffect(() => {
     getWeather();
-  }, []);
+  }, [city]);
 
   const getBackground = () => {
     if (!weather) return "from-[#0f172a] via-[#312e81] to-[#7c3aed]";;
@@ -90,18 +90,16 @@ function App() {
 
     <div className="w-full max-w-6xl bg-white/10 backdrop-blur-2xl rounded-[40px] shadow-[0_8px_32px_rgba(0,0,0,0.3)] p-10 border border-white/20 relative z-10">
 
-      <h1 className="text-6xl font-black text-center text-white mb-3 tracking-tight">
-        Weatherly
-      </h1>
+    <h1 className="text-6xl font-black leading-normal text-center mb-0 bg-gradient-to-r from-cyan-200 via-blue-300 to-purple-300 bg-clip-text text-transparent tracking-tight">
+      Weatherly
+    </h1>
 
       <p className="text-center text-white/70 mb-10 text-lg">
         Real-time weather forecasting
       </p>
 
         <SearchBar
-          city={city}
           setCity={setCity}
-          getWeather={getWeather}
         />
 
         {loading && (
@@ -113,7 +111,7 @@ function App() {
         )}
 
        {weather && !loading && (
-        <div className="grid lg:grid-cols-2 gap-8 items-start">
+        <div className="space-y-10">
         <WeatherCard weather={weather} />
         <Forecast forecast={forecast} />
         </div>

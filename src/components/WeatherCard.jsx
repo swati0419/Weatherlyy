@@ -3,18 +3,20 @@ import {Wind, Droplets, Thermometer, Gauge} from "lucide-react";
 function WeatherCard({ weather }) {
   return (
     <div className="space-y-8">
-      <div className="text-center text-white mb-12 bg-white/10 backdrop-blur-2xl border border-white/20 rounded-[32px] p-10 shadow-[0_8px_32px_rgba(0,0,0,0.3)] hover:scale-[1.01] transition-all duration-300">
+      <div className="text-center text-white mb-12">
+       <div className="w-44 h-44 mx-auto flex items-center justify-center rounded-full bg-white/10 backdrop-blur-xl border border-white/20 mb-2">
         <img
-          src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@4x.png`}
-          alt="weather-icon"
-          className="mx-auto w-44 drop shadow-2xl"
+        src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@4x.png`}
+        alt="weather-icon"
+        className="w-40 drop-shadow-[0_0_30px_rgba(255,255,255,0.9)] brightness-125 contrast-125"
         />
+    </div>
 
-        <h2 className="text-8xl font-black mb-2 tracking-tight">
+        <h2 className="text-6xl font-black mb-2 tracking-tight">
           {Math.round(weather.main.temp)}°C
         </h2>
 
-        <h3 className="text-5xl font-bold mb-2 tracking tight">
+        <h3 className="text-4xl font-bold mb-2 tracking tight">
           {weather.name}
         </h3>
 
