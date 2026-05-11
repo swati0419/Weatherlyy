@@ -31,7 +31,7 @@ Weatherlyy provides real-time weather updates, dynamic weather-based UI, and a c
 
 ## 📸 Preview
 
-<img width="100%" alt="Weatherly Preview" src="YOUR_SCREENSHOT_LINK_HERE" />
+<img width="100%" alt="Weatherly Preview" src="https://raw.githubusercontent.com/swati0419/Weatherlyy/main/weatherly-preview.png" />
 
 ---
 
