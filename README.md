@@ -22,6 +22,7 @@ Weatherlyy provides real-time weather updates, dynamic weather-based UI, and a c
 ## 🛠️ Tech Stack
 
 - React.js
+- Javascript
 - Tailwind CSS
 - Vite
 - OpenWeather API
